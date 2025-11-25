@@ -49,6 +49,16 @@ const Header = () => {
       </nav>
       
       <section className="hero">
+        <video 
+          className="hero-video-background"
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+        >
+          <source src="/rain-background.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-video-overlay"></div>
         <div className="hero-content">
           <div className="hero-text">
             <p className={getAnimationClass('fade-in-left', 'animate-greeting')}>Hello, I'm</p>

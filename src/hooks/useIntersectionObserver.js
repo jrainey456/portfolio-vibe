@@ -37,9 +37,3 @@ const useIntersectionObserver = (options = {}) => {
 };
 
 export default useIntersectionObserver;
-
-export default useIntersectionObserver;
-
-export default useIntersectionObserver;
-
-export default useIntersectionObserver;

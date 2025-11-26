@@ -55,7 +55,7 @@ const Projects = () => {
                   </div>
                   <div className={`project-links ${isVisible ? `fade-in visible ripple-delay-${index + 10}` : 'fade-in'}`}>
                     <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
-                      <span>🐙</span> GitHub
+                      <i className="fa-brands fa-github"></i> GitHub
                     </a>
                     <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer">
                       <span>🔗</span> Live Demo

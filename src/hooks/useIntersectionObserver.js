@@ -13,10 +13,14 @@ const useIntersectionObserver = (options = {}) => {
       const isVisible = entry.isIntersecting;
       const intersectionRatio = entry.intersectionRatio;
       
-      // Only fade in when element becomes visible, never fade out
-      if (isVisible && intersectionRatio > 0.1 && !hasIntersected) {
+      if (isVisible && intersectionRatio > 0.1) {
+        // Fade in when element becomes visible
         setIsIntersecting(true);
         setHasIntersected(true);
+      } else if (intersectionRatio === 0) {
+        // Reset when completely out of view so it can animate again
+        setIsIntersecting(false);
+        setHasIntersected(false);
       }
     }, {
       threshold: [0, 0.1, 0.2, 0.5, 0.8],
@@ -31,7 +35,7 @@ const useIntersectionObserver = (options = {}) => {
         observer.unobserve(element);
       }
     };
-  }, [hasIntersected, options]);
+  }, []);
 
   return [elementRef, isIntersecting, hasIntersected];
 };

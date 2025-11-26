@@ -84,12 +84,12 @@ const Header = () => {
             </div>
             <div className={getAnimationClass('fade-in-right delay-1', 'animate-social')}>
               <a 
-                href="https://www.linkedin.com/in/john-rainey-a324309a/" 
+                href="https://www.linkedin.com/in/yourprofile" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
               >
-                <span className="social-icon">💼</span>
+                <i className="fa-brands fa-linkedin social-icon"></i>
                 LinkedIn
               </a>
               <a 
@@ -98,7 +98,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 className="social-link"
               >
-                <span className="social-icon">🐙</span>
+                <i className="fa-brands fa-github social-icon"></i>
                 GitHub
               </a>
             </div>

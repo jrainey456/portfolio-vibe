@@ -85,7 +85,8 @@ const Header = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                View Resume
+                <i className="fa-solid fa-file-pdf"></i>
+                Resume
               </a>
               <a 
                 href="https://www.linkedin.com/in/yourprofile" 

@@ -543,7 +543,14 @@ main {
 .hero-right {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
+  align-items: flex-end;
+}
+
+.hero-right > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   align-items: flex-end;
 }
 
@@ -670,17 +677,18 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.875rem 2rem;
+  padding: 0.875rem 1.5rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  min-width: 140px;
+  width: 160px;
   height: 50px;
+  gap: 0.5rem;
 }
 
 .cta-button.primary {
@@ -701,7 +709,7 @@ main {
   padding: 0.875rem 1.5rem;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
   background: rgba(255, 255, 255, 0.1);
@@ -710,7 +718,7 @@ main {
   backdrop-filter: blur(10px);
   gap: 0.5rem;
   white-space: nowrap;
-  min-width: 140px;
+  width: 160px;
   height: 50px;
 }
 

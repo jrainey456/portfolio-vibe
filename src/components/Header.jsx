@@ -73,7 +73,10 @@ const Header = () => {
           <div className="hero-left">
             <div className="hero-text">
               <p className={getAnimationClass('fade-in-left', 'animate-greeting')}>Hello, I'm</p>
-              <h1 className={getAnimationClass('fade-in-up', 'animate-name')}>John Rainey</h1>
+              <h1 className={`hero-name ${getAnimationClass('fade-in-up', 'animate-name')}`}>
+                <span className="first-name">John</span>
+                <span className="last-name">Rainey</span>
+              </h1>
               <p className={getAnimationClass('fade-in-left delay-1', 'animate-title')}>Software Developer</p>
             </div>
           </div>

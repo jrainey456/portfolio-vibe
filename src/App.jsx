@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
-import Header from './components/Header';
+import Header, { Navbar } from './components/Header';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -10,6 +10,7 @@ function App() {
   return (
     <ThemeProvider>
       <div className="App">
+        <Navbar />
         <Header />
         <main>
           <About />

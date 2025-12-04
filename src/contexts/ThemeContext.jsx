@@ -14,7 +14,7 @@ export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     // Get theme preference from localStorage
     const savedTheme = localStorage.getItem('portfolioTheme');
-    return savedTheme ? JSON.parse(savedTheme) : false;
+    return savedTheme ? JSON.parse(savedTheme) : true;
   });
 
   const [animationTrigger, setAnimationTrigger] = useState(0);

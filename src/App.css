@@ -1,3 +1,6 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
 /* CSS Variables */
 :root {
   /* Blue color scheme */
@@ -6,7 +9,7 @@
   --primary-blue-light: #60a5fa;
   --secondary-blue: #1e40af;
   --accent-blue: #06b6d4;
-  
+
   /* Light mode colors */
   --bg-color: #ffffff;
   --text-color: #1f2937;
@@ -85,6 +88,7 @@
     opacity: 0;
     transform: translateX(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -96,6 +100,7 @@
     opacity: 0;
     transform: translateX(50px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -107,6 +112,7 @@
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -118,6 +124,7 @@
     opacity: 0;
     transform: translateY(-50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -150,89 +157,165 @@
 }
 
 /* Elements within cards start hidden */
-.skill-icon, .skill-name, .skill-description,
-.project-title, .project-description, .project-technologies, .project-links {
+.skill-icon,
+.skill-name,
+.skill-description,
+.project-title,
+.project-description,
+.project-technologies,
+.project-links {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
 
-.skill-icon.fade-in.visible, .skill-name.fade-in.visible, .skill-description.fade-in.visible,
-.project-title.fade-in.visible, .project-description.fade-in.visible, 
-.project-technologies.fade-in.visible, .project-links.fade-in.visible {
+.skill-icon.fade-in.visible,
+.skill-name.fade-in.visible,
+.skill-description.fade-in.visible,
+.project-title.fade-in.visible,
+.project-description.fade-in.visible,
+.project-technologies.fade-in.visible,
+.project-links.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Section titles and text elements */
-.section-title, .about-text, .about-image {
+.section-title,
+.about-text,
+.about-image {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
 
-.section-title.fade-in.visible, .about-text.fade-in.visible, .about-image.fade-in.visible {
+.section-title.fade-in.visible,
+.about-text.fade-in.visible,
+.about-image.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Elements within cards start hidden */
-.skill-icon, .skill-name, .skill-description,
-.project-image, .project-title, .project-description, .project-technologies, .project-links,
+.skill-icon,
+.skill-name,
+.skill-description,
+.project-image,
+.project-title,
+.project-description,
+.project-technologies,
+.project-links,
 .tech-tag {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
 
-.skill-icon.fade-in.visible, .skill-name.fade-in.visible, .skill-description.fade-in.visible,
-.project-image.fade-in.visible, .project-title.fade-in.visible, .project-description.fade-in.visible, 
-.project-technologies.fade-in.visible, .project-links.fade-in.visible,
+.skill-icon.fade-in.visible,
+.skill-name.fade-in.visible,
+.skill-description.fade-in.visible,
+.project-image.fade-in.visible,
+.project-title.fade-in.visible,
+.project-description.fade-in.visible,
+.project-technologies.fade-in.visible,
+.project-links.fade-in.visible,
 .tech-tag.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Section titles and text elements start hidden */
-.section-title, .about-text, .about-image {
+.section-title,
+.about-text,
+.about-image {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
 
-.section-title.fade-in.visible, .about-text.fade-in.visible, .about-image.fade-in.visible {
+.section-title.fade-in.visible,
+.about-text.fade-in.visible,
+.about-image.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
-.delay-1 { 
+
+.delay-1 {
   transition-delay: 0.1s;
 }
-.delay-2 { 
+
+.delay-2 {
   transition-delay: 0.2s;
 }
-.delay-3 { 
+
+.delay-3 {
   transition-delay: 0.3s;
 }
-.delay-4 { 
+
+.delay-4 {
   transition-delay: 0.4s;
 }
 
 /* Ripple delay classes for staggered animations - faster timing */
-.ripple-delay-1 { transition-delay: 0.1s; }
-.ripple-delay-2 { transition-delay: 0.15s; }
-.ripple-delay-3 { transition-delay: 0.2s; }
-.ripple-delay-4 { transition-delay: 0.25s; }
-.ripple-delay-5 { transition-delay: 0.3s; }
-.ripple-delay-6 { transition-delay: 0.35s; }
-.ripple-delay-7 { transition-delay: 0.4s; }
-.ripple-delay-8 { transition-delay: 0.45s; }
-.ripple-delay-9 { transition-delay: 0.5s; }
-.ripple-delay-10 { transition-delay: 0.55s; }
-.ripple-delay-11 { transition-delay: 0.6s; }
-.ripple-delay-12 { transition-delay: 0.65s; }
-.ripple-delay-13 { transition-delay: 0.7s; }
-.ripple-delay-14 { transition-delay: 0.75s; }
-.ripple-delay-15 { transition-delay: 0.8s; }
+.ripple-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.ripple-delay-2 {
+  transition-delay: 0.15s;
+}
+
+.ripple-delay-3 {
+  transition-delay: 0.2s;
+}
+
+.ripple-delay-4 {
+  transition-delay: 0.25s;
+}
+
+.ripple-delay-5 {
+  transition-delay: 0.3s;
+}
+
+.ripple-delay-6 {
+  transition-delay: 0.35s;
+}
+
+.ripple-delay-7 {
+  transition-delay: 0.4s;
+}
+
+.ripple-delay-8 {
+  transition-delay: 0.45s;
+}
+
+.ripple-delay-9 {
+  transition-delay: 0.5s;
+}
+
+.ripple-delay-10 {
+  transition-delay: 0.55s;
+}
+
+.ripple-delay-11 {
+  transition-delay: 0.6s;
+}
+
+.ripple-delay-12 {
+  transition-delay: 0.65s;
+}
+
+.ripple-delay-13 {
+  transition-delay: 0.7s;
+}
+
+.ripple-delay-14 {
+  transition-delay: 0.75s;
+}
+
+.ripple-delay-15 {
+  transition-delay: 0.8s;
+}
 
 /* Ensure sections start hidden and animate in */
 .section {
@@ -248,36 +331,52 @@
 }
 
 /* Header and hero should always be visible */
-.header, .hero {
+.header,
+.hero {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
 
 /* Elements within cards start hidden and animate in */
-.skill-icon, .skill-name, .skill-description,
-.project-image, .project-title, .project-description, .project-technologies, .project-links,
+.skill-icon,
+.skill-name,
+.skill-description,
+.project-image,
+.project-title,
+.project-description,
+.project-technologies,
+.project-links,
 .tech-tag {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
 
-.skill-icon.fade-in.visible, .skill-name.fade-in.visible, .skill-description.fade-in.visible,
-.project-image.fade-in.visible, .project-title.fade-in.visible, .project-description.fade-in.visible, 
-.project-technologies.fade-in.visible, .project-links.fade-in.visible,
+.skill-icon.fade-in.visible,
+.skill-name.fade-in.visible,
+.skill-description.fade-in.visible,
+.project-image.fade-in.visible,
+.project-title.fade-in.visible,
+.project-description.fade-in.visible,
+.project-technologies.fade-in.visible,
+.project-links.fade-in.visible,
 .tech-tag.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Section titles and text elements start hidden */
-.section-title, .about-text, .about-image {
+.section-title,
+.about-text,
+.about-image {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
 }
 
-.section-title.fade-in.visible, .about-text.fade-in.visible, .about-image.fade-in.visible {
+.section-title.fade-in.visible,
+.about-text.fade-in.visible,
+.about-image.fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -460,7 +559,7 @@ main {
   border: 2px solid #3b82f6;
 }
 
-.theme-toggle-input:checked + .theme-toggle-label {
+.theme-toggle-input:checked+.theme-toggle-label {
   background: linear-gradient(135deg, #1e293b, #334155);
   border-color: #64748b;
 }
@@ -480,7 +579,7 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.theme-toggle-input:checked + .theme-toggle-label .theme-toggle-slider {
+.theme-toggle-input:checked+.theme-toggle-label .theme-toggle-slider {
   transform: translateX(30px);
   background: #1e293b;
 }
@@ -519,10 +618,10 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, 
-    rgba(59, 130, 246, 0.1) 0%, 
-    rgba(0, 0, 0, 0.4) 50%, 
-    rgba(30, 64, 175, 0.15) 100%);
+  background: linear-gradient(135deg,
+      rgba(59, 130, 246, 0.1) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(30, 64, 175, 0.15) 100%);
   z-index: -1;
 }
 
@@ -548,7 +647,7 @@ main {
   align-items: center;
 }
 
-.hero-right > div {
+.hero-right>div {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -574,11 +673,11 @@ main {
 
 .hero-name {
   font-size: clamp(3rem, 7.5vw, 6rem);
-  font-weight: 900;
+  font-weight: 700;
   margin: 0.5rem 0 0.5rem 0;
   line-height: 0.9;
-  letter-spacing: -0.02em;
-  font-family: 'Impact', 'Franklin Gothic Bold', 'Arial Black', sans-serif;
+  letter-spacing: -0.01em;
+  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   color: #ffffff;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -588,7 +687,8 @@ main {
   gap: 0.2rem;
 }
 
-.first-name, .last-name {
+.first-name,
+.last-name {
   display: block;
   line-height: 0.85;
   margin: 0;
@@ -988,39 +1088,39 @@ main {
     gap: 1rem;
     padding: 1rem;
   }
-  
+
   .nav-links {
     gap: 1rem;
   }
-  
+
   .hero {
     padding: 0 1rem;
     text-align: center;
   }
-  
+
   .hero-content {
     gap: 2rem;
   }
-  
 
-  
+
+
   .about-content {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .section {
     padding: 3rem 0;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
@@ -1030,12 +1130,12 @@ main {
   .hero-name {
     font-size: clamp(5rem, 25vw, 10rem);
   }
-  
+
   .btn-large {
     padding: 0.875rem 2rem;
     font-size: 1rem;
   }
-  
+
   .social-links {
     flex-direction: column;
     gap: 0.75rem;
@@ -1043,7 +1143,18 @@ main {
 }
 
 /* Animation delays for staggered effects */
-.delay-0 { animation-delay: 0s; }
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}

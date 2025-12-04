@@ -1,5 +1,6 @@
 import React from 'react';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import ProjectCardOverlap from './ProjectCardOverlap';
 
 const Projects = () => {
   const [sectionRef, isVisible] = useIntersectionObserver();
@@ -74,30 +75,14 @@ const Projects = () => {
         <div className="container">
           <div className="section-content">
             <h2 className={`section-title ${isVisible ? 'fade-in visible ripple-delay-1' : 'fade-in'}`}>Projects</h2>
-            <div className="projects-grid">
+            <div>
               {projects.map((project, index) => (
-                <div key={project.id} className={`project-card ${isVisible ? `fade-in visible ripple-delay-${index + 2}` : 'fade-in'}`}>
-                  <div className={`project-image ${isVisible ? `fade-in visible ripple-delay-${index + 3}` : 'fade-in'}`}>
-                    <img src={project.image} alt={project.title} />
-                  </div>
-                  <div className="project-content">
-                    <h3 className={`project-title ${isVisible ? `fade-in visible ripple-delay-${index + 4}` : 'fade-in'}`}>{project.title}</h3>
-                    <p className={`project-description ${isVisible ? `fade-in visible ripple-delay-${index + 5}` : 'fade-in'}`}>{project.description}</p>
-                    <div className={`project-technologies ${isVisible ? `fade-in visible ripple-delay-${index + 6}` : 'fade-in'}`}>
-                      {project.technologies.map((tech, techIndex) => (
-                        <span key={tech} className={`tech-tag ${isVisible ? `fade-in visible ripple-delay-${index + 7 + techIndex}` : 'fade-in'}`}>{tech}</span>
-                      ))}
-                    </div>
-                    <div className={`project-links ${isVisible ? `fade-in visible ripple-delay-${index + 10}` : 'fade-in'}`}>
-                      <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
-                        <i className="fa-brands fa-github"></i> GitHub
-                      </a>
-                      <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer">
-                        <span>🔗</span> Live Demo
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <ProjectCardOverlap
+                  key={project.id}
+                  project={project}
+                  isVisible={isVisible}
+                  index={index}
+                />
               ))}
             </div>
           </div>

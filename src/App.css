@@ -1081,6 +1081,106 @@ main {
   color: var(--primary-blue-dark);
 }
 
+/* Overlapping Box Project Layout */
+.project-card-overlap {
+  position: relative;
+  height: 400px;
+  margin-bottom: 3rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-card-overlap .project-background-box {
+  position: absolute;
+  top: 25px;
+  left: 290px;
+  width: 450px;
+  height: 350px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-card-overlap .project-foreground-box {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 320px;
+  height: 280px;
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-overlap .project-foreground-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.project-card-overlap .project-foreground-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.project-card-overlap .project-foreground-box p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.project-card-overlap .project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card-overlap .tech-tag {
+  background: var(--primary-blue);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.project-card-overlap .project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+/* Reversed Layout for Alternating Projects */
+.project-card-overlap.layout-reversed .project-background-box {
+  left: 0;
+  right: auto;
+}
+
+.project-card-overlap.layout-reversed .project-foreground-box {
+  left: 430px;
+  right: auto;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav {
@@ -1115,6 +1215,21 @@ main {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card-overlap {
+    height: 500px;
+  }
+
+  .project-card-overlap .project-background-box {
+    width: 280px;
+    height: 280px;
+  }
+
+  .project-card-overlap .project-foreground-box {
+    width: 220px;
+    height: 220px;
+    top: 80px;
   }
 
   .section {

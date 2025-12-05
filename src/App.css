@@ -11,12 +11,12 @@
   --accent-blue: #06b6d4;
 
   /* Light mode colors */
-  --bg-color: #ffffff;
-  --text-color: #1f2937;
-  --text-light: #6b7280;
-  --border-color: #e5e7eb;
-  --card-bg: #f9fafb;
-  --nav-bg: rgba(255, 255, 255, 0.95);
+  --bg-color: #eff6ff;
+  --text-color: #1e3a8a;
+  --text-light: #475569;
+  --border-color: #bfdbfe;
+  --card-bg: #dbeafe;
+  --nav-bg: rgba(147, 197, 253, 0.95);
 }
 
 :root.dark-mode {
@@ -26,7 +26,7 @@
   --text-light: #94a3b8;
   --border-color: #334155;
   --card-bg: #1e293b;
-  --nav-bg: rgba(15, 23, 42, 0.95);
+  --nav-bg: rgba(30, 41, 59, 0.95);
 }
 
 /* Hero Animation Classes - Initial Load */
@@ -459,7 +459,7 @@ main {
 
 /* Header and Navigation */
 .header {
-  /* background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%); */
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
   background-size: 200% 100%;
   background-position: 0% 0%;
   color: white;
@@ -508,13 +508,21 @@ main {
 }
 
 .nav-brand-link h2 {
-  color: var(--primary-blue);
+  color: #1e3a8a;
   font-weight: 700;
   margin: 0;
   transition: all 0.3s ease;
 }
 
+:root.dark-mode .nav-brand-link h2 {
+  color: var(--primary-blue);
+}
+
 .nav-brand-link:hover h2 {
+  color: #1e40af;
+}
+
+:root.dark-mode .nav-brand-link:hover h2 {
   color: var(--accent-blue);
 }
 
@@ -527,14 +535,22 @@ main {
 }
 
 .nav-links a {
-  color: var(--text-color);
+  color: #1e3a8a;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
 
+:root.dark-mode .nav-links a {
+  color: var(--text-color);
+}
+
 .nav-links a:hover {
+  color: #1e40af;
+}
+
+:root.dark-mode .nav-links a:hover {
   color: var(--primary-blue);
 }
 
@@ -679,7 +695,7 @@ main {
   letter-spacing: -0.01em;
   font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   color: #ffffff;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: translateY(50px);
   display: flex;
@@ -1107,7 +1123,7 @@ main {
 .project-card-overlap .project-background-box {
   position: absolute;
   top: 25px;
-  left: 290px;
+  left: 310px;
   width: 450px;
   height: 350px;
   background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue));
@@ -1190,7 +1206,7 @@ main {
 }
 
 .project-card-overlap.layout-reversed .project-foreground-box {
-  left: 430px;
+  left: 440px;
   right: auto;
 }
 

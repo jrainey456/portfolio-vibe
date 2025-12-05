@@ -40,6 +40,24 @@ const Projects = () => {
       <section ref={sectionRef} id="projects" className={`section projects ${isVisible ? 'section-visible' : 'section-hidden'}`}>
         <div className="container">
           <div className="section-content">
+            <h2 className={`section-title ${isVisible ? 'fade-in visible ripple-delay-1' : 'fade-in'}`}>Projects</h2>
+            <div>
+              {projects.map((project, index) => (
+                <ProjectCardOverlap
+                  key={project.id}
+                  project={project}
+                  isVisible={isVisible}
+                  index={index}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={`section projects ${isVisible ? 'section-visible' : 'section-hidden'}`}>
+        <div className="container">
+          <div className="section-content">
             <h2 className={`section-title ${isVisible ? 'fade-in visible ripple-delay-1' : 'fade-in'}`}>Featured Projects</h2>
             <div className="projects-grid">
               {projects.map((project, index) => (
@@ -65,24 +83,6 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={`section projects ${isVisible ? 'section-visible' : 'section-hidden'}`}>
-        <div className="container">
-          <div className="section-content">
-            <h2 className={`section-title ${isVisible ? 'fade-in visible ripple-delay-1' : 'fade-in'}`}>Projects</h2>
-            <div>
-              {projects.map((project, index) => (
-                <ProjectCardOverlap
-                  key={project.id}
-                  project={project}
-                  isVisible={isVisible}
-                  index={index}
-                />
               ))}
             </div>
           </div>

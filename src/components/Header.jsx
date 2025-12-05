@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
+import rainBackground from '../assets/HeroPanelBackgrounds/rain-background.mp4';
+import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 // Separate Navbar component
 export const Navbar = () => {
@@ -37,17 +39,19 @@ export const Navbar = () => {
 
 // Header component (hero section only)
 const Header = () => {
-  const { isDarkMode, toggleTheme, animationTrigger } = useTheme();
+  const { isDarkMode, toggleTheme } = useTheme();
+  const [heroRef, isVisible] = useIntersectionObserver({ threshold: [0.3] });
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
-    if (animationTrigger > 0) {
-      // Reset animations
+    if (isVisible) {
+      // Small delay to ensure clean animation restart
       setShouldAnimate(false);
-      // Trigger animations after a brief delay
       setTimeout(() => setShouldAnimate(true), 50);
+    } else {
+      setShouldAnimate(false);
     }
-  }, [animationTrigger]);
+  }, [isVisible]);
 
   const getAnimationClass = (baseClass, triggerClass) => {
     if (shouldAnimate) {
@@ -58,16 +62,15 @@ const Header = () => {
 
   return (
     <header className="header">
-      <section className="hero">
+      <section ref={heroRef} className="hero">
         <video 
           className="hero-video-background"
           autoPlay 
           loop 
           muted 
           playsInline
-        >
-          <source src="/src/assets/HeroPanelBackgrounds/rain-background.mp4" type="video/mp4" />
-        </video>
+          src={rainBackground}
+        />
         <div className="hero-video-overlay"></div>
         <div className="hero-content">
           <div className="hero-left">

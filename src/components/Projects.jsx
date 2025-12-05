@@ -45,10 +45,9 @@ const Projects = () => {
           <h2 className={`section-title ${isVisible ? 'fade-in visible ripple-delay-1' : 'fade-in'}`}>Projects</h2>
           <div>
             {projects.map((project, index) => (
-              <ProjectCardOverlap
+              <ProjectCardOverlapWrapper
                 key={project.id}
                 project={project}
-                isVisible={isVisible}
                 index={index}
               />
             ))}
@@ -56,6 +55,20 @@ const Projects = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const ProjectCardOverlapWrapper = ({ project, index }) => {
+  const [cardRef, isVisible] = useIntersectionObserver();
+
+  return (
+    <div ref={cardRef}>
+      <ProjectCardOverlap
+        project={project}
+        isVisible={isVisible}
+        index={index}
+      />
+    </div>
   );
 };
 

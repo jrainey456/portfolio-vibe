@@ -34,6 +34,11 @@ const Experience = () => {
       name: 'ASP.NET',
       icon: <i className="fa-solid fa-code"></i>,
       description: 'Enterprise web applications with C#'
+    },
+    {
+      name: 'Copilot',
+      icon: <i className="fa-solid fa-robot"></i>,
+      description: 'AI-powered development and code generation'
     }
   ];
 

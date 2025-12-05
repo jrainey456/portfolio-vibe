@@ -901,9 +901,8 @@ main {
 
 /* About Section */
 .about-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -911,6 +910,9 @@ main {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-light);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .about-text p {

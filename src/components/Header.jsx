@@ -66,7 +66,7 @@ const Header = () => {
           muted 
           playsInline
         >
-          <source src="/rain-background.mp4" type="video/mp4" />
+          <source src="/src/assets/HeroPanelBackgrounds/rain-background.mp4" type="video/mp4" />
         </video>
         <div className="hero-video-overlay"></div>
         <div className="hero-content">

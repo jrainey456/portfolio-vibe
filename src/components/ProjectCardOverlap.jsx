@@ -6,6 +6,7 @@ const ProjectCardOverlap = ({ project, isVisible, index }) => {
     return (
         <div className={`project-card-overlap ${isEven ? 'layout-normal' : 'layout-reversed'} ${isVisible ? `fade-in visible ripple-delay-${index + 2}` : 'fade-in'}`}>
             <div className="project-background-box">
+                <img src={project.image} alt={project.title} className="project-screenshot" />
             </div>
             <div className="project-foreground-box">
                 <h3 className={isVisible ? 'fade-in visible' : 'fade-in'}>{project.title}</h3>
@@ -20,7 +21,7 @@ const ProjectCardOverlap = ({ project, isVisible, index }) => {
                         <i className="fa-brands fa-github"></i> GitHub
                     </a>
                     <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer">
-                        <span>🔗</span> Live Demo
+                        <i className="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
                     </a>
                 </div>
             </div>

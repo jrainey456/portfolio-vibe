@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import rainBackground from '../assets/HeroPanelBackgrounds/rain-background.mp4';
+import resumePdf from '../assets/Resume/John Rainey Resume - 2025.pdf';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 // Separate Navbar component
@@ -86,16 +87,15 @@ const Header = () => {
           <div className="hero-right">
             <div className={getAnimationClass('fade-in-right', 'animate-buttons')}>
               <a 
-                href="/resume.pdf" 
+                href={resumePdf} 
                 className="cta-button primary"
-                target="_blank" 
-                rel="noopener noreferrer"
+                download="John_Rainey_Resume_2025.pdf"
               >
                 <i className="fa-solid fa-file-pdf"></i>
                 Resume
               </a>
               <a 
-                href="https://www.linkedin.com/in/yourprofile" 
+                href="https://www.linkedin.com/in/john-rainey-a324309a/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-button"

@@ -13,16 +13,16 @@ const Projects = () => {
       id: 1,
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio built with React and featuring dark/light mode toggle.',
-      technologies: ['React', 'CSS3', 'Vite'],
+      technologies: ['React', 'CSS', 'Vite'],
       image: PortfolioScreenshot,
       github: 'https://github.com/jrainey456/portfolio-vibe',
-      live: 'https://www.rainydaydevelopment.com/'
+      live: null
     },
     {
       id: 2,
       title: 'Wordle Clone',
       description: 'A recreation of the popular word-guessing game with custom features.',
-      technologies: ['JavaScript', 'HTML5', 'CSS3'],
+      technologies: ['JavaScript', 'HTML5', 'CSS'],
       image: WordleScreenshot,
       github: 'https://github.com/jrainey456/wordle',
       live: 'https://wordle.rainydaydevelopment.com/'
@@ -30,8 +30,8 @@ const Projects = () => {
     {
       id: 3,
       title: 'Pruitt Solutions',
-      description: 'A full-featured helpdesk and support ticketing system built for a local business to manage customer inquiries and service requests.',
-      technologies: ['JavaScript', 'HTML5', 'CSS3'],
+      description: 'A concept splash page for an ongoing full-featured helpdesk and support ticketing system designed to manage customer inquiries and service requests.',
+      technologies: ['JavaScript', 'HTML5', 'CSS'],
       image: PruittSolutionsScreenshot,
       github: 'https://github.com/jrainey456/pruitt-solutions-splash-page',
       live: 'https://dev.pruitt-solutions.com/'

@@ -20,9 +20,11 @@ const ProjectCardOverlap = ({ project, isVisible, index }) => {
                     <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
                         <i className="fa-brands fa-github"></i> GitHub
                     </a>
-                    <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer">
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                    </a>
+                    {project.live && (
+                        <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer">
+                            <i className="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                    )}
                 </div>
             </div>
         </div>

@@ -31,6 +31,11 @@ const Experience = () => {
       description: 'Database design and query optimization'
     },
     {
+      name: 'CSS',
+      icon: <i className="fa-brands fa-css3-alt"></i>,
+      description: 'Modern styling and responsive design'
+    },
+    {
       name: 'ASP.NET',
       icon: <i className="fa-solid fa-code"></i>,
       description: 'Enterprise web applications with C#'

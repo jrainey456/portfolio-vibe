@@ -4,6 +4,7 @@ import ProjectCardOverlap from './ProjectCardOverlap';
 import PortfolioScreenshot from '../assets/ProjectScreenshots/PortfolioScreenshot.JPG';
 import WordleScreenshot from '../assets/ProjectScreenshots/WordleScreenshot.JPG';
 import PruittSolutionsScreenshot from '../assets/ProjectScreenshots/PruittSolutionsScreenshot.JPG';
+import BakeryScreenshot from '../assets/ProjectScreenshots/BakeryScreenshot.JPG';
 
 const Projects = () => {
   const [sectionRef, isVisible] = useIntersectionObserver();
@@ -35,6 +36,15 @@ const Projects = () => {
       image: PruittSolutionsScreenshot,
       github: 'https://github.com/jrainey456/pruitt-solutions-splash-page',
       live: 'https://dev.pruitt-solutions.com/'
+    },
+    {
+      id: 4,
+      title: 'Rise and Shine Bakery',
+      description: 'A beautiful bakery website featuring an elegant menu display and contact form.',
+      technologies: ['Next.js', 'React', 'CSS'],
+      image: BakeryScreenshot,
+      github: 'https://github.com/jrainey456/bakery-site',
+      live: 'https://bakery.rainydaydevelopment.com/'
     }
   ];
 

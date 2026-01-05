@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import rainBackground from '../assets/HeroPanelBackgrounds/rain-background.mp4';
-import resumePdf from '../assets/Resume/John Rainey Resume - 2025.pdf';
+import resumePdf from '../assets/Resume/John Rainey Resume - 2026.pdf';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 // Separate Navbar component
@@ -21,7 +21,7 @@ export const Navbar = () => {
         <li><a href="#projects">Projects</a></li>
       </ul>
       <div className="theme-toggle-wrapper">
-        <input 
+        <input
           type="checkbox"
           id="theme-toggle"
           className="theme-toggle-input"
@@ -64,11 +64,11 @@ const Header = () => {
   return (
     <header className="header">
       <section ref={heroRef} className="hero">
-        <video 
+        <video
           className="hero-video-background"
-          autoPlay 
-          loop 
-          muted 
+          autoPlay
+          loop
+          muted
           playsInline
           src={rainBackground}
         />
@@ -86,26 +86,26 @@ const Header = () => {
           </div>
           <div className="hero-right">
             <div className={getAnimationClass('fade-in-right', 'animate-buttons')}>
-              <a 
-                href={resumePdf} 
+              <a
+                href={resumePdf}
                 className="cta-button primary"
                 download="John_Rainey_Resume_2025.pdf"
               >
                 <i className="fa-solid fa-file-pdf"></i>
                 Resume
               </a>
-              <a 
-                href="https://www.linkedin.com/in/john-rainey-a324309a/" 
-                target="_blank" 
+              <a
+                href="https://www.linkedin.com/in/john-rainey-a324309a/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="social-button"
               >
                 <i className="fa-brands fa-linkedin social-icon"></i>
                 LinkedIn
               </a>
-              <a 
-                href="https://github.com/jrainey456" 
-                target="_blank" 
+              <a
+                href="https://github.com/jrainey456"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="social-button"
               >

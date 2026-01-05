@@ -89,7 +89,7 @@ const Header = () => {
               <a
                 href={resumePdf}
                 className="cta-button primary"
-                download="John_Rainey_Resume_2025.pdf"
+                download="John_Rainey_Resume_2026.pdf"
               >
                 <i className="fa-solid fa-file-pdf"></i>
                 Resume

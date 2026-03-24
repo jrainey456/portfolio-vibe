@@ -5,6 +5,8 @@ import PortfolioScreenshot from '../assets/ProjectScreenshots/PortfolioScreensho
 import WordleScreenshot from '../assets/ProjectScreenshots/WordleScreenshot.JPG';
 import PruittSolutionsScreenshot from '../assets/ProjectScreenshots/PruittSolutionsScreenshot.JPG';
 import BakeryScreenshot from '../assets/ProjectScreenshots/BakeryScreenshot.JPG';
+import NoHelpdeskScreenshot from '../assets/ProjectScreenshots/NoHelpdesk.jpg';
+import HouseRulesScreenshot from '../assets/ProjectScreenshots/HouseRules.jpg';
 
 const Projects = () => {
   const [sectionRef, isVisible] = useIntersectionObserver();
@@ -45,6 +47,26 @@ const Projects = () => {
       image: BakeryScreenshot,
       github: 'https://github.com/jrainey456/bakery-site',
       live: 'https://bakery.rainydaydevelopment.com/'
+    },
+    {
+      id: 5,
+      title: 'NoHelpdesk',
+      description: 'A "No as a Service" website that makes an API call to naas.isalman.dev/no to deliver the most helpful response possible.',
+      technologies: ['JavaScript', 'HTML5', 'CSS'],
+      image: NoHelpdeskScreenshot,
+      imagePosition: '75% center',
+      github: 'https://github.com/jrainey456/no-help-desk-chat',
+      live: 'https://nohelpdesk.rainydaydevelopment.com/'
+    },
+    {
+      id: 6,
+      title: 'HouseRules',
+      description: 'A horror-themed game concept using WebSockets to push real-time messages from server to clients while tracking session IDs for each connected player.',
+      technologies: ['Node.js', 'WebSockets', 'JavaScript'],
+      image: HouseRulesScreenshot,
+      github: null,
+      live: 'https://houserules.rainydaydevelopment.com/',
+      comingSoon: true
     }
   ];
 

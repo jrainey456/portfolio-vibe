@@ -5,8 +5,11 @@ const ProjectCardOverlap = ({ project, isVisible, index }) => {
 
     return (
         <div className={`project-card-overlap ${isEven ? 'layout-normal' : 'layout-reversed'} ${isVisible ? `fade-in visible ripple-delay-${index + 2}` : 'fade-in'}`}>
+            {project.comingSoon && (
+                <span className="coming-soon-badge">Coming Soon</span>
+            )}
             <div className="project-background-box">
-                <img src={project.image} alt={project.title} className="project-screenshot" />
+                <img src={project.image} alt={project.title} className="project-screenshot" style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined} />
             </div>
             <div className="project-foreground-box">
                 <h3 className={isVisible ? 'fade-in visible' : 'fade-in'}>{project.title}</h3>
@@ -17,9 +20,11 @@ const ProjectCardOverlap = ({ project, isVisible, index }) => {
                     ))}
                 </div>
                 <div className={`project-links ${isVisible ? 'fade-in visible' : 'fade-in'}`}>
-                    <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
-                        <i className="fa-brands fa-github"></i> GitHub
-                    </a>
+                    {project.github && (
+                        <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
+                            <i className="fa-brands fa-github"></i> GitHub
+                        </a>
+                    )}
                     {project.live && (
                         <a href={project.live} className="project-link" target="_blank" rel="noopener noreferrer">
                             <i className="fa-solid fa-arrow-up-right-from-square"></i> Live Demo

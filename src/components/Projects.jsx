@@ -7,6 +7,7 @@ import PruittSolutionsScreenshot from '../assets/ProjectScreenshots/PruittSoluti
 import BakeryScreenshot from '../assets/ProjectScreenshots/BakeryScreenshot.JPG';
 import NoHelpdeskScreenshot from '../assets/ProjectScreenshots/NoHelpdesk.jpg';
 import HouseRulesScreenshot from '../assets/ProjectScreenshots/HouseRules.jpg';
+import CounterlockScreenshot from '../assets/ProjectScreenshots/Counterlock.png';
 
 const Projects = () => {
   const [sectionRef, isVisible] = useIntersectionObserver();
@@ -61,12 +62,20 @@ const Projects = () => {
     {
       id: 6,
       title: 'HouseRules',
-      description: 'A horror-themed game concept using WebSockets to push real-time messages from server to clients while tracking session IDs for each connected player.',
+      description: 'A horror-themed multiplayer game using WebSockets for real-time messages and player sessions.',
       technologies: ['Node.js', 'WebSockets', 'JavaScript'],
       image: HouseRulesScreenshot,
-      github: null,
-      live: 'https://houserules.rainydaydevelopment.com/',
-      comingSoon: true
+      github: 'https://github.com/jrainey456/house-rules',
+      live: 'https://houserules.rainydaydevelopment.com/'
+    },
+    {
+      id: 7,
+      title: 'Counterlock',
+      description: 'Uses an API to fetch Deadlock hero images and counter-item data, helping players identify effective counters.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'API'],
+      image: CounterlockScreenshot,
+      github: 'https://github.com/jrainey456/Counterlock',
+      live: 'https://counterlock.rainydaydevelopment.com/'
     }
   ];
 

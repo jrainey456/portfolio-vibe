@@ -9,7 +9,14 @@ const ProjectCardOverlap = ({ project, isVisible, index }) => {
                 <span className="coming-soon-badge">Coming Soon</span>
             )}
             <div className="project-background-box">
-                <img src={project.image} alt={project.title} className="project-screenshot" style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined} />
+                {project.image && (
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="project-screenshot"
+                        style={project.imagePosition ? { objectPosition: project.imagePosition } : undefined}
+                    />
+                )}
             </div>
             <div className="project-foreground-box">
                 <h3 className={isVisible ? 'fade-in visible' : 'fade-in'}>{project.title}</h3>

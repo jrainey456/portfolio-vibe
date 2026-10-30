@@ -63,6 +63,7 @@ const Projects = () => {
       id: 6,
       title: 'HouseRules',
       description: 'A horror-themed multiplayer game using WebSockets for real-time messages and player sessions.',
+      description: 'A horror-themed multiplayer game using WebSockets for real-time messages and player sessions.',
       technologies: ['Node.js', 'WebSockets', 'JavaScript'],
       image: HouseRulesScreenshot,
       github: 'https://github.com/jrainey456/house-rules',

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import rainBackground from '../assets/HeroPanelBackgrounds/rain-background.mp4';
-import resumePdf from '../assets/Resume/John Rainey Resume - 2026.pdf';
+import resumePdf from '../assets/Resume/John Rainey - Full Stack Software Engineer Resume 2026.pdf';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
 
 // Separate Navbar component
